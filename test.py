@@ -1,86 +1,104 @@
-'''
-Created on 24-Jul-2020
-
-@author: kailash
-'''
 
 
+from matplotlib.lines import lineStyles
+
+INDENT_IN_OUTPUT  = "---------"
 a1 = 10
-print(type(a1))
-print("divison is",  a1/1.2)
+def main():
 
-# strings
-
-b = "My name is Python"
-print(len(b)) 
-c = b.replace('name', 'a', 1)
-c = b.split(' ')
-print (c)
-
-# Tuple -> immutable
-tup = (1, 'sss', 3.14)
-tup_int = (1,2,3)
-print(max(tup_int)) 
-print(tup[1])
-
-if 3 in tup_int:
-    print('3 is present in tuple')
-
-# list -> mutable, reverse, insert, sort, l1 + l2, L1*3 + l2
-# dictionary -> mutable, unordered collection, d1.keys(), d1.values(), d1.pop("key")
-# Set ->    unordered, unindexed collection, unique elements, add(), update([1,2,3]), 
-#           remove("1"), union(), intersection
-
-# lambda
-lam = lambda x: x*x*x
-print (lam(10))
-
-list1 = [1,3,4,8,9]
-list_odd = list(filter(lambda x: (x%2!=0), list1))
-print(list_odd)
-
-list_task_mul_2 = list(map(lambda x : x*2,list1)) 
-print(list_task_mul_2)
-
-from functools import reduce # reducedto consolidated value
-sum_list = reduce(lambda x,y: x+y, list1)
-print(sum_list)
-
-# Inheritance -> multiple, multilevel
-
-class Phone_base:
-    def __init__(self, color):
-        self.color  = color
-
-class Phone(Phone_base):
-    def __init__(self,color, brand):
-        super().__init__(color)
-        self.brand = brand
-        
-    def set_color(self, color):
-        self.color = color
-        
-    def get_color (self):
-        return self.color
+    print(type(a1))
+    print("divison is",  a1/1.2)
     
-phone_moto = Phone("Red", "mi");
-phone_moto.set_color("blue")
-print(phone_moto.get_color())
+    # strings
+    
+    b = "My name is Python"
+    print(len(b)) 
+    c = b.replace('name', 'a', 1)
+    c = b.split(' ')
+    print (c)
+    
+    # Tuple -> immutable
+    print(INDENT_IN_OUTPUT, "using tuple")
+    tup = (1, 'sss', 3.14)
+    tup_int = (1,2,3)
+    print(max(tup_int)) 
+    print(tup[1])
+    
+    if 3 in tup_int:
+        print('3 is present in tuple')
+    
+    # list -> mutable, reverse, insert, sort, l1 + l2, L1*3 + l2
+    # dictionary -> mutable, unordered collection, d1.keys(), d1.values(), d1.pop("key")
+    # Set ->    unordered, unindexed collection, unique elements, add(), update([1,2,3]), 
+    #           remove("1"), union(), intersection
+    
+    
+    
+    # Inheritance -> multiple, multilevel
+    
+    class Phone_base:
+        def __init__(self, color):
+            self.color  = color
+    
+    class Phone(Phone_base):
+        def __init__(self,color, brand):
+            super().__init__(color)
+            self.brand = brand
+            
+        def set_color(self, color):
+            self.color = color
+            
+        def get_color (self):
+            return self.color
+    
+    print (INDENT_IN_OUTPUT, 'class demo')    
+    phone_moto = Phone("Red", "mi");
+    phone_moto.set_color("blue")
+    print(phone_moto.get_color())
+    
+    # numpy -> shape, random.randint, vstack, hstack, column_stack(), 
+    #        intersect1d, setdiff1d (difference), 
+    #        sum([n1,n2]), sum([n1,n2], axis = 0) for columns sum 
+    #        n1 = n1+1, n1=n1-1, n1=n1*2, n1=n1/2,
+    #        mean, median, std (standard deviation), save(), load()
+    import numpy as np
+    
+    print(INDENT_IN_OUTPUT, 'using numpy')
+    np_z = np.zeros((10,10))
+    np_z = np.full((10,10), 10)
+    np_z = np.arange(10,20, 5) # [10,15]
+    print(np_z)
+    
+    # pandas -> panel data, data manipulation
+    #        s[1] (element at index), s[:4] (first four elements) , s[-3:] (last 3 elements)
+    #        s+ 5, s1+ s2
+    import pandas as pd
+    
+    print(INDENT_IN_OUTPUT, 'using pandas')
+    pd1 = pd.Series([0,19,27,'a'])
+    print(pd1)
+    pd1 = pd.DataFrame({'keys':["a", "a", "a"] ,'values':["100", "100", "100"]} )
+    print(pd1)
+    
+    # iris = pd.read_csv('iris.csv')
+    # print(iris.describe())  # head(), tail(), shape(), iloc[0:3, 0:2] (extract first 3 rows and 2 columns)
+    #      drop('column_name', axis=1) drop column, drop ([1,2,3], axis =0) drop rows
+    #     min(), max(), mean(), median()
+    #     def half(x): return x*0.5   iris['[column1', 'column2']].apply(half)
+    #    iris.['column'].value_counts(), iris.sort_values(by= 'column')
+    #    
+    
+    
+    # matplotlib ->
+    
+    from matplotlib import pyplot as plt, pyplot
+    
+    TIME_TO_PAUSE = 1
+    print(INDENT_IN_OUTPUT, "using matplotlib")
+    
 
-# numpy -> shape, random.randint, vstack, hstack, column_stack(), 
-#        intersect1d, setdiff1d (difference), 
-#        sum([n1,n2]), sum([n1,n2], axis = 0) for columns sum 
-#        n1 = n1+1, n1=n1-1, n1=n1*2, n1=n1/2,
-#        mean, median, std (standard deviation), save(), load()
-import numpy as np
 
-np_z = np.zeros((10,10))
-np_z = np.full((10,10), 10)
-np_z = np.arange(10,20, 5) # [10,15]
-print(np_z)
-
-# pandas -> panel data, data manipulation
-import pandas as pd
-
-pd1 = pd.Series([0,19,27,'a'])
-print(pd1)
+if ( __name__ == '__main__'):
+     print("main")
+     main()
+    
