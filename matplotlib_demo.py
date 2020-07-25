@@ -8,6 +8,15 @@ INDENT_IN_OUTPUT  = "---------"
 TIME_TO_PAUSE = 1
 print(INDENT_IN_OUTPUT, "using matplotlib")
 
+def main():
+#     bar_demo()
+#     plot_demo()
+#     scatter_plot()
+#     histogram_demo()
+#     box_plot()
+#     violin_plot()
+    pie_plot()
+    
 def pie_plot():
     fruit = ['apple', 'orange', 'grapes']
     quantity = [10,30,50]
@@ -69,13 +78,7 @@ def violin_plot():
     plt.pause(TIME_TO_PAUSE)
     plt.close()
 
+
 if (__name__ == "__main__"):
-#     bar_demo()
-#     plot_demo()
-#     scatter_plot()
-#     histogram_demo()
-#     box_plot()
-#     violin_plot()
-    pie_plot()
-    
+    main()
     
