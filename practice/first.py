@@ -21,27 +21,7 @@ def main():
     
     
     
-    # Inheritance -> multiple, multilevel
-    
-    class Phone_base:
-        def __init__(self, color):
-            self.color  = color
-    
-    class Phone(Phone_base):
-        def __init__(self,color, brand):
-            super().__init__(color)
-            self.brand = brand
-            
-        def set_color(self, color):
-            self.color = color
-            
-        def get_color (self):
-            return self.color
-    
-    print (INDENT_IN_OUTPUT, 'class demo')    
-    phone_moto = Phone("Red", "mi");
-    phone_moto.set_color("blue")
-    print(phone_moto.get_color())
+   
     
     # numpy -> shape, random.randint, vstack, hstack, column_stack(), 
     #        intersect1d, setdiff1d (difference), 
