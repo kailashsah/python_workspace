@@ -65,8 +65,8 @@ def main():
     
     print(INDENT_IN_OUTPUT, 'using numpy')
     np_z = np.zeros((10,10))
-    np_z = np.full((10,10), 10)
-    np_z = np.arange(10,20, 5) # [10,15]
+    np_z = np.full((10,10), 10) # set all elements to 10
+    np_z = np.arange(10,20, 5) #  output is [10,15]
     print(np_z)
     
     # pandas -> panel data, data manipulation
