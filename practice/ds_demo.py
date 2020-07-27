@@ -1,13 +1,15 @@
 
 from practice.first import INDENT_IN_OUTPUT
 from _collections import defaultdict
+from queue import LifoQueue
 
 
 
 def main():
 #     tuple_demo()
 #     dict_demo()
-    list_remove()
+#     list_remove()
+    stack()
 
 def tuple_demo():
     
@@ -45,6 +47,24 @@ def list_remove():
     
     del list[1:2]  # will remove element at index 1
     print(list)
+    
+def stack():
+    stack = LifoQueue()
+    
+#     stack.get_nowait()
+    stack.put(10)
+    stack.put(20)
+    stack.put(30)
+    
+    print(list(stack.queue))
+    
+    stack.get()
+    print( "pop done", list(stack.queue))
+    stack.get()
+    print( "pop done", list(stack.queue))
+    stack.get()
+    print( "pop done", list(stack.queue))
+    
     
     
 # list -> mutable, reverse, insert, sort, l1 + l2, L1*3 + l2
