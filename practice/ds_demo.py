@@ -2,13 +2,16 @@
 from practice.first import INDENT_IN_OUTPUT
 from _collections import defaultdict
 
-print(INDENT_IN_OUTPUT, "using tuple")
+
 
 def main():
 #     tuple_demo()
-    dict_demo()
+#     dict_demo()
+    list_remove()
 
 def tuple_demo():
+    
+    print(INDENT_IN_OUTPUT, "using tuple")
     # Tuple -> immutable
     tup = (1, 'sss', 3.14)
     tup_int = (1,2,3)
@@ -31,6 +34,17 @@ def dict_demo():
     print("d['c'] : ", d['c'])  # not present
     print("d.__missing__(1) :" , d.__missing__(1))
     
+def list_remove():
+    list = [1,2,3,4,5]
+    print("source list :", list)
+    a = list.pop(0)
+    print(a)
+    
+    list.remove(2)    
+    print(list)
+    
+    del list[1:2]  # will remove element at index 1
+    print(list)
     
     
 # list -> mutable, reverse, insert, sort, l1 + l2, L1*3 + l2
