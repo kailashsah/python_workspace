@@ -1,5 +1,5 @@
 
-from first import INDENT_IN_OUTPUT 
+from practice.first import INDENT_IN_OUTPUT 
 
 
 # lambda

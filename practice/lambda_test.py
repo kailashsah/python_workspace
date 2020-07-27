@@ -1,9 +1,9 @@
 import unittest
-from lambda_demo import get_cube
+from practice.lambda_demo import get_cube
 
 class Test1(unittest.TestCase):
     
-    def testone(self):
+    def test_get_cube(self):
         ret = get_cube(10)
         self.assertEqual(ret, 1000)
         

@@ -17,20 +17,7 @@ def main():
     c = b.split(' ')
     print (c)
     
-    # Tuple -> immutable
-    print(INDENT_IN_OUTPUT, "using tuple")
-    tup = (1, 'sss', 3.14)
-    tup_int = (1,2,3)
-    print(max(tup_int)) 
-    print(tup[1])
-    
-    if 3 in tup_int:
-        print('3 is present in tuple')
-    
-    # list -> mutable, reverse, insert, sort, l1 + l2, L1*3 + l2
-    # dictionary -> mutable, unordered collection, d1.keys(), d1.values(), d1.pop("key")
-    # Set ->    unordered, unindexed collection, unique elements, add(), update([1,2,3]), 
-    #           remove("1"), union(), intersection
+   
     
     
     
