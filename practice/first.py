@@ -1,5 +1,5 @@
 
-INDENT_IN_OUTPUT  = "---------"
+INDENT_IN_OUTPUT = "---------"
 
 def main():
  
@@ -13,7 +13,7 @@ def main():
 def test():
     a1 = 10
     print(type(a1))
-    print("divison is",  a1/1.2)
+    print("divison is", a1/1.2)
     
     # strings
     
@@ -22,7 +22,7 @@ def test():
     c = b.replace('name', 'a', 1) # My a is Python
     print(c)
     c = b.split(' ')  # ['My', 'name', 'is', 'Python']
-    print (c) 
+    print(c) 
     
     
 def numpy_demo():
@@ -74,7 +74,7 @@ def args_demo():
     print("args fun print :", fun_sum(10,20, 30)) # print 60
     
     
-def kwargs_demo():
+def kwargs_demo() :
     print(INDENT_IN_OUTPUT, "**kwargs demo")   
     def fun_print (**kwarg):
         print(kwarg)
@@ -82,6 +82,6 @@ def kwargs_demo():
     print(fun_print(kawarg1 = "one", kawarg2 = 2)) # {'kawarg1': 'one', 'kawarg2': 2}
 
 if ( __name__ == '__main__'):
-     print("main")
-     main()
+    print("main")
+    main()
     
